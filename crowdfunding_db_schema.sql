@@ -2,10 +2,17 @@
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 
+-- incase of tables not creating properly, drop tables using following commands
+DROP TABLE IF EXISTS contacts CASCADE;
+DROP TABLE IF EXISTS category CASCADE;
+DROP TABLE IF EXISTS subcategory CASCADE;
+DROP TABLE IF EXISTS campaign CASCADE;
+-- 
+
 CREATE TABLE "contacts" (
     "contact_id" INTEGER   NOT NULL,
     "first_name" VARCHAR   NOT NULL,
-    "last_name" VARHCAR   NOT NULL,
+    "last_name" VARCHAR   NOT NULL,
     "email" VARCHAR   NOT NULL,
     CONSTRAINT "pk_contacts" PRIMARY KEY (
         "contact_id"
@@ -13,8 +20,8 @@ CREATE TABLE "contacts" (
 );
 
 CREATE TABLE "category" (
-    "category_id" VARHCAR   NOT NULL,
-    "category" VARHCAR   NOT NULL,
+    "category_id" VARCHAR   NOT NULL,
+    "category" VARCHAR   NOT NULL,
     CONSTRAINT "pk_category" PRIMARY KEY (
         "category_id"
      )
@@ -57,3 +64,9 @@ REFERENCES "category" ("category_id");
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "subcategory" ("subcategory_id");
 
+-- Check to see all tables are running properly
+
+SELECT * FROM contacts;
+SELECT * FROM campaign;
+SELECT * FROM category;
+SELECT * FROM subcategory;
