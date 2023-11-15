@@ -41,10 +41,10 @@ We used below libraries for our project:
 Usage:
 This project reflects the way we can use the csv files to extract meaning full information and transform it into specific data types and columns and export into simple and clean format of csv file. Which can be further accessed in Postgres SQl and can be used to extract required information.
 
-Screenshots added for refernce from SQL queries.
+Screenshots added for reference from SQL queries.
 
 
 
 Contribution:
-Group 9 team: Anna Bartender, Qudsia Ahmad, Qianchen Ai and Lovepreet Singh.
+Group 9 team: Anna Brabender, Qudsia Ahmad, Qianchen Ai and Lovepreet Singh.
 Big thanks: Instructors: Tom seeber.  
